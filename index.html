@@ -41,8 +41,12 @@
           <p>Daniel Aristizabal Romero / <a target="_blank" href="http://twitter.com/cronopio2">@cronopio2</a></p>
           <h4><a target="_blank" href="http://pereirajs.org">Pereria.JS</a></h4>
         </section>
-        <section><h1>¿Qué es npm?</h1></section>
         <section>
+          <h1>¿Qué es npm?</h1>
+          <aside class="notes">Breve historia y explicacion.</aside>
+        </section>
+        <section>
+          <section>
           <h2>Entre algunas cosas:</h2>
           <ul>
             <li>Administrador de paquetes de Node.js</li>
@@ -53,33 +57,48 @@
             <li>Total Modulos (Ayer): 135,209</li>
           </ul>
           <pre><code>npm help</code></pre>
+          <aside class="notes">Explicar que significa publico y que significa abierto</aside>
+          </section>
+          <section>
+            <h3 style="text-transform:none;">Administración de paquetes en <u>LAS DEMÁS</u> plataformas.</h3>
+            <img src="gifs/otherpackagemanagers.gif" width="500px" height="460px"/>
+            <p><a target="_blank" href="http://nodejsreactions.tumblr.com/post/98315049184/package-management-in-every-other-platform">Cortesia de NodeJSReactions.tumblr.com</a></p>
+          </section>
         </section>
         <section>
           <h1>Instalar modulos desde cualquier medio</h1>
         </section>
-        <section><h1 style="text-transform:none;"><pre><code>npm install</code></pre></h1></section>
+        <section>
+          <h1 style="text-transform:none;"><pre><code>npm install</code></pre></h1>
+        </section>
         <section>
           <h3>Existe una variedad de formas de indicar que paquetes instalar</h3>
           <ol>
-            <li>Un directorio que contiene un archivo <code>package.json</code></li>
-            <li>Un archivo <code>.tar.gz</code> como en el punto 1</li>
+            <li>Un directorio que contiene un archivo <code style="color:magenta;">package.json</code></li>
+            <li>Un archivo <code style="color:magenta">.tar.gz</code> como en el punto 1</li>
             <li>Una URL que responda con el punto 2</li>
-            <li>Un <code>nombre@version</code> publicado en el registro.</li>
-            <li>Un <code>nombre@tag</code> que apunte al punto 4</li>
-            <li>Un <code>nombre</code> cuya ultima version será instalada.</li>
+            <li>Un <code style="color:magenta;">nombre@version</code> publicado en el registro.</li>
+            <li>Un <code style="color:magenta;">nombre@tag</code> que apunte al punto 4</li>
+            <li>Un <code style="color:magenta;">nombre</code> cuya ultima version será instalada.</li>
             <li>Una git-url que, cuando clonado resulte en el punto 1</li>
           </ol>
+          <aside class="notes">Hacer el demo instalando colors e instalandolo en la version 0.6.2</aside>
         </section>
         <section>
-          <h1><a target="_blank" href="http://browsenpm.org/package.json">package.json</a></h1>
+          <h1><a target="_blank" href="http://browsenpm.org/package.json">package.json.jit.su</a></h1>
           <p><a target="_blank" href="https://docs.npmjs.com/files/package.json">Página Oficial</a></p>
+          <aside class="notes">Explicar las git dependencias y las devDependencies</aside>
         </section>
-        <section><h1 style="text-transform:none;"><pre><code>npm init</code></pre></h1></section>
+        <section>
+          <h1 style="text-transform:none;"><pre><code>npm init</code></pre></h1>
+          <aside class="notes">Iniciar el modulo desde 0 para ser el primer modulo para linkear mas adelante y hacer require</aside>
+        </section>
         <section>
           <section>
           <h2>Dependencias</h2>
           <p><code>npm install --save</code></p>
           <p><code>npm install --save-dev</code></p>
+          <aside class="notes">Explicar bien las dependencias y sus relaciones y porque es un punto importante para nodejs y porque npm lo hace tan bien.</asides>
           </section>
           <section>
             <ul>
@@ -89,7 +108,7 @@
               <li>&gt;= 0.2.3</li>
               <li>= 0.2.4</li>
             </ul>
-            <hr>
+            <hr style="line-style:dotted;">
             <ul>
               <li>0.1 - 0.2</li>
               <li>&lt;1.0.0 || &gt;=2.3.1 &lt;2.4.5 || &gt;=2.5.2 &lt;3.0.0</li>
@@ -101,19 +120,39 @@
             </ul>
           </section>
         </section>
-        <section><h1>Comparte tus modulos!</h1></section>
         <section>
-          <h2>Comparte tu trabajo con los demas.</h2>
+          <h1>OH Wait!</h1>
+          <h2>Olvide mencionar que npm está escrito en Node.js</h2>
+        </section>
+        <section>
+          <h2 style="text-transform:none;"><pre><code>npm install -g npm</code></pre></h2>
+          <img src="gifs/npminstallgnpm.gif" />
+          <p><small><a target="_blank" href="http://nodejsreactions.tumblr.com/post/62519626582/npm-update-g-npm">NodeJSReactions.tumblr.com</a></small></p>
+        </section>
+        <section>
+          <h1>Comparte tus modulos!</h1>
+          <aside class="notes">Hablar sobre la importancia de no reinventar la rueda, compartir codigo, open source, software libre y demas</aside>
+        </section>
+        <section>
+          <h2>Comparte tu trabajo con los demás.</h2>
           <ul>
             <li><strong><code>npm adduser</code></strong>: Para crear una cuenta en el registro npm.</li>
             <li><strong><code>npm login</code></strong>: Usa las credenciales de tu cuenta para las peticiones de npm.</li>
+            <li><strong><code>npm whoami</code></strong>: Mostrar el usuario de las credenciales definidas.
             <li><strong><code>npm publish</code></strong>: Sube el modulo al registro y cualquiera podrá instalarlo.</li>
           </ul>
+          <aside class="notes">Mostrar el login junto con el whoami</aside>
         </section>
         
         <section><h1>scripts! yay</h1></section>
-        <section><h1 style="text-transform:none;"><pre><code>npm start</code></pre></h1></section>
-        <section><h1 style="text-transform:none;"><pre style="width:110%;"><code>npm run-script compile</code></pre></h1></section>
+        <section>
+          <h1 style="text-transform:none;"><pre><code>npm start</code></pre></h1>
+          <aside class="notes">Comando usado normalmente para inicializar las aplicaciones hechas con nodejs se puede ejecutar cualquier comando y pasar algunos parametros por omision.</aside>
+        </section>
+        <section>
+          <h1 style="text-transform:none;"><pre style="width:110%;"><code>npm run-script compile</code></pre></h1>
+        <aside class="notes">Podemos definir scripts personalizados con los comandos que queramos</asides>
+        </section>
         <section><h1 style="text-transform:none;"><pre><code>npm config</code></pre></h1></section>
         <section>
         <section>
@@ -136,7 +175,10 @@
           <small>Más información en <a target="_blank" href="https://docs.npmjs.com/misc/config"> la documentación de npm.</a></small>
         </section>
         </section>
-        <section><h1 style="text-transform:none;"><pre><code>npm link</code></pre></h1></section>
+        <section>
+          <h1 style="text-transform:none;"><pre><code>npm link</code></pre></h1>
+          <aside class="notes">Hacer el demo de linkear los dos modulos y hacer funcionar los require</asides>
+        </section>
         <section><h1>Gracias :-D</h1></section>
       </div>
     </div>
